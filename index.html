@@ -1,26 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>vv</title>
-		<link rel="stylesheet" type="text/css" href="css/st.css" >
-	
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+<div class="progress"></div>
+
+<style>
+  @keyframes go-left-right {        /* объявляем имя анимации: "go-left-right" */
+    from { left: 0px; }             /* от: left: 0px */
+    to { left: calc(100% - 50px); } /* до: left: 100%-50px */
+  }
 
 
-<div class="cssload-preloader">
-			<span>З</span>
-		<span>а</span>
-		<span>г</span>
-		<span>р</span>
-		<span>у</span>
-		<span>з</span>
-		<span>к</span>
-		<span>а</span>
+	body{
+		background-image: url(on.jpg);
+	}
+  .progress {
+    animation: go-left-right 3s infinite alternate;
+    /* применить анимацию "go-left-right" на элементе
+       продолжительностью 3 секунды
+       количество раз: бесконечно (infinite)
+       менять направление анимации каждый раз (alternate)
+    */
 
-</div>
-	
-<script src="script.js" type="text/javascript"></script>
+    position: relative;
+    border: 2px solid green;
+    width: 50px;
+    height: 20px;
+    background :green;
+
+  }
+</style>
 </body>
+
 </html>
